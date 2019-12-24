@@ -1,0 +1,270 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "candidates",
+    "status"
+  ],
+  "properties": {
+    "candidates": {
+      "$id": "#/properties/candidates",
+      "type": "array",
+      "title": "The Candidates Schema",
+      "items": {
+        "$id": "#/properties/candidates/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "formatted_address",
+          "geometry",
+          "icon",
+          "name",
+          "photos",
+          "place_id",
+          "types"
+        ],
+        "properties": {
+          "formatted_address": {
+            "$id": "#/properties/candidates/items/properties/formatted_address",
+            "type": "string",
+            "title": "The Formatted_address Schema",
+            "default": "",
+            "examples": [
+              "Нью-Йорк, США"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "geometry": {
+            "$id": "#/properties/candidates/items/properties/geometry",
+            "type": "object",
+            "title": "The Geometry Schema",
+            "required": [
+              "location",
+              "viewport"
+            ],
+            "properties": {
+              "location": {
+                "$id": "#/properties/candidates/items/properties/geometry/properties/location",
+                "type": "object",
+                "title": "The Location Schema",
+                "required": [
+                  "lat",
+                  "lng"
+                ],
+                "properties": {
+                  "lat": {
+                    "$id": "#/properties/candidates/items/properties/geometry/properties/location/properties/lat",
+                    "type": "number",
+                    "title": "The Lat Schema",
+                    "default": 0.0,
+                    "examples": [
+                      40.7127753
+                    ]
+                  },
+                  "lng": {
+                    "$id": "#/properties/candidates/items/properties/geometry/properties/location/properties/lng",
+                    "type": "number",
+                    "title": "The Lng Schema",
+                    "default": 0.0,
+                    "examples": [
+                      -74.0059728
+                    ]
+                  }
+                }
+              },
+              "viewport": {
+                "$id": "#/properties/candidates/items/properties/geometry/properties/viewport",
+                "type": "object",
+                "title": "The Viewport Schema",
+                "required": [
+                  "northeast",
+                  "southwest"
+                ],
+                "properties": {
+                  "northeast": {
+                    "$id": "#/properties/candidates/items/properties/geometry/properties/viewport/properties/northeast",
+                    "type": "object",
+                    "title": "The Northeast Schema",
+                    "required": [
+                      "lat",
+                      "lng"
+                    ],
+                    "properties": {
+                      "lat": {
+                        "$id": "#/properties/candidates/items/properties/geometry/properties/viewport/properties/northeast/properties/lat",
+                        "type": "number",
+                        "title": "The Lat Schema",
+                        "default": 0.0,
+                        "examples": [
+                          40.9175771
+                        ]
+                      },
+                      "lng": {
+                        "$id": "#/properties/candidates/items/properties/geometry/properties/viewport/properties/northeast/properties/lng",
+                        "type": "number",
+                        "title": "The Lng Schema",
+                        "default": 0.0,
+                        "examples": [
+                          -73.70027209999999
+                        ]
+                      }
+                    }
+                  },
+                  "southwest": {
+                    "$id": "#/properties/candidates/items/properties/geometry/properties/viewport/properties/southwest",
+                    "type": "object",
+                    "title": "The Southwest Schema",
+                    "required": [
+                      "lat",
+                      "lng"
+                    ],
+                    "properties": {
+                      "lat": {
+                        "$id": "#/properties/candidates/items/properties/geometry/properties/viewport/properties/southwest/properties/lat",
+                        "type": "number",
+                        "title": "The Lat Schema",
+                        "default": 0.0,
+                        "examples": [
+                          40.4773991
+                        ]
+                      },
+                      "lng": {
+                        "$id": "#/properties/candidates/items/properties/geometry/properties/viewport/properties/southwest/properties/lng",
+                        "type": "number",
+                        "title": "The Lng Schema",
+                        "default": 0.0,
+                        "examples": [
+                          -74.25908989999999
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "icon": {
+            "$id": "#/properties/candidates/items/properties/icon",
+            "type": "string",
+            "title": "The Icon Schema",
+            "default": "",
+            "examples": [
+              "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "name": {
+            "$id": "#/properties/candidates/items/properties/name",
+            "type": "string",
+            "title": "The Name Schema",
+            "default": "",
+            "examples": [
+              "Нью-Йорк"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "photos": {
+            "$id": "#/properties/candidates/items/properties/photos",
+            "type": "array",
+            "title": "The Photos Schema",
+            "items": {
+              "$id": "#/properties/candidates/items/properties/photos/items",
+              "type": "object",
+              "title": "The Items Schema",
+              "required": [
+                "height",
+                "html_attributions",
+                "photo_reference",
+                "width"
+              ],
+              "properties": {
+                "height": {
+                  "$id": "#/properties/candidates/items/properties/photos/items/properties/height",
+                  "type": "integer",
+                  "title": "The Height Schema",
+                  "default": 0,
+                  "examples": [
+                    4032
+                  ]
+                },
+                "html_attributions": {
+                  "$id": "#/properties/candidates/items/properties/photos/items/properties/html_attributions",
+                  "type": "array",
+                  "title": "The Html_attributions Schema",
+                  "items": {
+                    "$id": "#/properties/candidates/items/properties/photos/items/properties/html_attributions/items",
+                    "type": "string",
+                    "title": "The Items Schema",
+                    "default": "",
+                    "examples": [
+                      "<a href=\"https://maps.google.com/maps/contrib/111376783004243095356\">Allen Todd</a>"
+                    ],
+                    "pattern": "^(.*)$"
+                  }
+                },
+                "photo_reference": {
+                  "$id": "#/properties/candidates/items/properties/photos/items/properties/photo_reference",
+                  "type": "string",
+                  "title": "The Photo_reference Schema",
+                  "default": "",
+                  "examples": [
+                    "CmRaAAAAuUwpLqeDxbcSTqWMxQmjr3ikomondFxLRW7Dcg3nJJ0nSFXNj34ssJA9r9VsvQvq2LQzC0XP5nEYvJlXAEn-wrznJ0tRZp4sy4s-Tt0sDbi6SHFOwIM-5L8aUToVQ2KWEhAclWFkJxlq5ls_xQ_DVHy8GhR91_-wv4St2aXjKsnsxg36LSPUqg"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "width": {
+                  "$id": "#/properties/candidates/items/properties/photos/items/properties/width",
+                  "type": "integer",
+                  "title": "The Width Schema",
+                  "default": 0,
+                  "examples": [
+                    2268
+                  ]
+                }
+              }
+            }
+          },
+          "place_id": {
+            "$id": "#/properties/candidates/items/properties/place_id",
+            "type": "string",
+            "title": "The Place_id Schema",
+            "default": "",
+            "examples": [
+              "ChIJOwg_06VPwokRYv534QaPC8g"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "types": {
+            "$id": "#/properties/candidates/items/properties/types",
+            "type": "array",
+            "title": "The Types Schema",
+            "items": {
+              "$id": "#/properties/candidates/items/properties/types/items",
+              "type": "string",
+              "title": "The Items Schema",
+              "default": "",
+              "examples": [
+                "locality",
+                "political"
+              ],
+              "pattern": "^(.*)$"
+            }
+          }
+        }
+      }
+    },
+    "status": {
+      "$id": "#/properties/status",
+      "type": "string",
+      "title": "The Status Schema",
+      "default": "",
+      "examples": [
+        "OK"
+      ],
+      "pattern": "^(.*)$"
+    }
+  }
+}
